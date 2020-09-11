@@ -1,0 +1,17 @@
+export default [
+  'Oops!',
+  'Too bad!',
+  'So close!',
+  'You’ll get it next time!',
+  'Don’t kick yourself!',
+  'Guess what?!',
+  'Oh no!',
+  'Don’t give up yet!',
+  'Come on – you can do it!',
+  'Even I didn’t know that one!',
+  'Better luck next time!',
+  'Nice try!',
+  'Bugger!',
+  'Darn it!',
+  'Bummer!',
+]

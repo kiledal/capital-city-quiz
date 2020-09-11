@@ -1,32 +1,49 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+  <div class="app">
+    <router-view v-if="ready" />
   </div>
 </template>
 
+<script>
+import { mapState } from 'vuex'
+
+export default {
+  computed: {
+    ...mapState(['ready']),
+  },
+  async created() {
+    this.$store.dispatch('initializeStore')
+  },
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-#nav {
-  padding: 30px;
+*:focus {
+  outline: 3px solid #ff8c1a;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+input,
+button {
+  font-family: 'Poppins', sans-serif;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.app {
+  background: #ffc408;
+  min-height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #121212;
 }
 </style>

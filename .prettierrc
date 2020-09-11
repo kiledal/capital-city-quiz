@@ -1,0 +1,11 @@
+{
+  "trailingComma": "es5",
+  "semi": false,
+  "useTabs": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "no-mixed-spaces-and-tabs": true,
+  "no-trailing-spaces": true,
+  "printWidth": 120,
+  "prettier.parser": "flow"
+}
